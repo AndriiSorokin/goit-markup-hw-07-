@@ -209,6 +209,10 @@ nav {
   font-size: 18px;
 }
 
+.modal-text {
+  color: #fff;
+}
+
 .work-list {
   display: flex;
   flex-wrap: wrap;
