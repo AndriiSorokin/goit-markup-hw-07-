@@ -6,10 +6,15 @@
     text-align: center;
 }
 
-.hero-title {
+.hero-content {
     padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 696px;
     margin: 0 auto;
-    width: 696px;
+}
+
+.hero-title {
+    margin-bottom: 30px;
     color: $white-color;
     font-family: Roboto;
     font-weight: 900;

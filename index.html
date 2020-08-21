@@ -59,8 +59,10 @@
     <main>
       <!-- HEROOOOOO -->
       <section class="hero">
-        <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <a href="#" class="btn-hero" data-modal-open>Заказать услугу</a>
+        <div class="hero-content">
+          <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
+          <button class="btn" data-modal-open>Заказать услугу</button>
+        </div>
       </section>
 
       <section class="section ideology">
@@ -70,32 +72,28 @@
             <li class="ideology-item antena">
               <h3>Внимание к деталям</h3>
               <p class="ideology-text">
-                Идейные соображения, а также начало повседневной работы по
-                формированию позиции.
+                Идейные соображения, а также начало повседневной работы по формированию позиции.
               </p>
             </li>
 
             <li class="ideology-item clock">
               <h3>Пунктуальность</h3>
               <p class="ideology-text">
-                Задача организации, в особенности же рамки и место обучения
-                кадров влечет за собой.
+                Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
               </p>
             </li>
 
             <li class="ideology-item diagramm">
               <h3>Планирование</h3>
               <p class="ideology-text">
-                Равным образом консультация с широким активом в значительной
-                степени обуславливает.
+                Равным образом консультация с широким активом в значительной степени обуславливает.
               </p>
             </li>
 
             <li class="ideology-item cosmonaut">
               <h3>Современные технологии</h3>
               <p class="ideology-text">
-                Значимость этих проблем настолько очевидна, что реализация
-                плановых заданий.
+                Значимость этих проблем настолько очевидна, что реализация плановых заданий.
               </p>
             </li>
           </ul>
@@ -109,32 +107,17 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="affair-list">
             <li class="affair-lists">
-              <img
-                src="./images/affair-1.jpg"
-                alt="desktop"
-                width="370"
-                height="294"
-              />
+              <img src="./images/affair-1.jpg" alt="desktop" width="370" height="294" />
               <p class="app">Десктопные приложения</p>
             </li>
 
             <li class="affair-lists">
-              <img
-                src="./images/affair-2.jpg"
-                alt="app"
-                width="370"
-                height="294"
-              />
+              <img src="./images/affair-2.jpg" alt="app" width="370" height="294" />
               <p class="app">Мобильные приложения</p>
             </li>
 
             <li class="affair-lists">
-              <img
-                src="./images/affair-3.jpg"
-                alt="design"
-                width="370"
-                height="294"
-              />
+              <img src="./images/affair-3.jpg" alt="design" width="370" height="294" />
               <p class="app">Дизайнерские решения</p>
             </li>
           </ul>
@@ -149,12 +132,7 @@
           <ul class="team">
             <li class="team-list">
               <a href="#">
-                <img
-                  src="./images/teamer-1.jpg"
-                  alt="crew"
-                  width="270"
-                  height="260"
-                />
+                <img src="./images/teamer-1.jpg" alt="crew" width="270" height="260" />
                 <h3>Игорь Демьяненко</h3>
                 <p class="team-text">Product Designer</p>
               </a>
@@ -193,12 +171,7 @@
 
             <li class="team-list">
               <a href="#">
-                <img
-                  src="./images/teamer-2.jpg"
-                  alt="crew"
-                  width="270"
-                  height="260"
-                />
+                <img src="./images/teamer-2.jpg" alt="crew" width="270" height="260" />
                 <h3>Ольга Репина</h3>
                 <p class="team-text">Frontend Developer</p>
               </a>
@@ -236,12 +209,7 @@
 
             <li class="team-list">
               <a href="#">
-                <img
-                  src="./images/teamer-3.jpg"
-                  alt="crew"
-                  width="270"
-                  height="260"
-                />
+                <img src="./images/teamer-3.jpg" alt="crew" width="270" height="260" />
                 <h3>Николай Тарасов</h3>
                 <p class="team-text">Marketing</p>
               </a>
@@ -279,12 +247,7 @@
 
             <li class="team-list">
               <a href="#">
-                <img
-                  src="./images/teamer-4.jpg"
-                  alt="crew"
-                  width="270"
-                  height="260"
-                />
+                <img src="./images/teamer-4.jpg" alt="crew" width="270" height="260" />
                 <h3>Михаил Ермаков</h3>
                 <p class="team-text">UI Designer</p>
               </a>
@@ -431,14 +394,8 @@
         <div class="footer-form">
           <p class="footer-text">Подпишитесь на рассылку</p>
           <form class="form-footer">
-            <input
-              type="email"
-              name="user-mail"
-              class="input-user-mail"
-              required
-              placeholder="E-mail"
-            />
-            <button type="submit" class="footer-btn-form telegram">
+            <input type="email" name="user-mail" class="input-user-mail" required placeholder="E-mail" />
+            <button type="submit" class="btn telegram">
               Подписаться
             </button>
           </form>
@@ -458,14 +415,7 @@
             <svg class="modal-svg">
               <use href="./images/sprite1.svg#icon-person"></use>
             </svg>
-            <input
-              class="modal-input"
-              type="text"
-              name="text-name"
-              placeholder="Андрей Андреевич"
-              id="name"
-              required
-            />
+            <input class="modal-input" type="text" name="text-name" placeholder="Андрей Андреевич" id="name" required />
           </div>
 
           <div class="modal-form">
@@ -473,14 +423,7 @@
             <svg class="modal-svg">
               <use href="./images/sprite1.svg#icon-phones"></use>
             </svg>
-            <input
-              class="modal-input"
-              type="tel"
-              name="tel"
-              placeholder="+380639379992"
-              id="tel"
-              required
-            />
+            <input class="modal-input" type="tel" name="tel" placeholder="+380639379992" id="tel" required />
           </div>
 
           <div class="modal-form">
@@ -499,28 +442,15 @@
           </div>
 
           <label class="text-area-label" for="texterea">Комментарий</label>
-          <textarea
-            class="text-area"
-            name="massage"
-            placeholder="Введите текст"
-            id="texterea"
-          ></textarea>
+          <textarea class="text-area" name="massage" placeholder="Введите текст" id="texterea"></textarea>
           <div class="checkbox-wrapper">
-            <input
-              type="checkbox"
-              class="checkbox-input"
-              value="accept"
-              id="checkbox"
-              required
-            />
-            <label class="checkbox-label" for="checkbox"
-              >Соглашаюсь с рассылкой и принимаю
-              <a class="checkbox-link" href="" target="_blank"
-                >Условия договора</a
-              ></label
-            >
+            <input type="checkbox" class="checkbox-input" value="accept" id="checkbox" required />
+            <label class="checkbox-label" for="checkbox">
+              Соглашаюсь с рассылкой и принимаю
+              <a class="checkbox-link" href="" target="_blank">Условия договора</a>
+            </label>
           </div>
-          <button type="submit" class="modal-button">
+          <button type="submit" class="btn">
             Отправить
           </button>
         </form>
