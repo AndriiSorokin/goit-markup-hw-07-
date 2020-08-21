@@ -18,18 +18,17 @@
     visibility: visible;
 }
 
-.work-list h2 {
-    color: $second-text-color;
-    font-size: 18px;
+.work-list {
+    display: flex;
+    flex-wrap: wrap;
+    & h2 {
+        color: $second-text-color;
+        font-size: 18px;
+    }
 }
 
 .modal-text {
     color: $white-color;
-}
-
-.work-list {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .portfolio-text {
@@ -38,38 +37,37 @@
     padding-top: 20px;
     padding-bottom: 20px;
     color: $primary-text-color;
-}
-
-.portfolio-text p {
-    margin-top: 6px;
-}
-
-.portfolio-text h2 {
-    margin-bottom: 4px;
-    line-height: 2;
-}
-
-.portfolio-overlay {
-    position: relative;
+    & p {
+        margin-top: 6px;
+    }
+    & h2 {
+        margin-bottom: 4px;
+        line-height: 2;
+    }
 }
 
 .work-list-item {
     width: 370px;
     border: 1px solid #EEEEEE;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+    &:not(:nth-child(3n)) {
+        margin-right: 30px;
+    }
+    &:not(:nth-child(n+7)) {
+        margin-bottom: 30px;
+    }
 }
 
-.work-list-item:hover,
-.work-list-item:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+.portfolio-overlay {
+    position: relative;
 }
 
-.work-list-item:not(:nth-child(3n)) {
-    margin-right: 30px;
-}
-
-.work-list-item:not(:nth-child(n+7)) {
-    margin-bottom: 30px;
+.portfolio-overlay:hover .overlay {
+    transform: translateY(0%);
 }
 
 .overlay {
@@ -91,8 +89,4 @@
     visibility: hidden;
     transform: translateY(25%);
     transition: all 0.75s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-overlay:hover .overlay {
-    transform: translateY(0%);
 }
