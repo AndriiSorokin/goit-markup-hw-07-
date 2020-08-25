@@ -65,6 +65,48 @@ a {
   color: #212121;
 }
 
+@media screen and (min-width: 480px) {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu-wrapper {
+    display: none;
+    position: absolute;
+    top: 95px;
+    left: 0;
+    background-color: #ffffff;
+    width: 480px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-wrapper.is-open {
+    display: block;
+    display: flex;
+  }
+  .auth-nav.list {
+    margin-left: 0;
+    margin-top: 5px;
+    padding-bottom: 60px;
+  }
+  .site-nav-item {
+    margin-bottom: 40px;
+    text-align: center;
+    margin-right: 0;
+  }
+  .auth-nav-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -72,10 +114,23 @@ a {
   padding-right: 15px;
 }
 
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    margin: 0 auto;
+  }
+}
+
 header {
   background-color: #fff;
   padding: 25px 0;
   border-bottom: 1px solid #ECECEC;
+  position: relative;
 }
 
 .logo {
@@ -103,10 +158,6 @@ nav {
   align-items: center;
 }
 
-.site-nav {
-  display: flex;
-}
-
 .site-nav a {
   color: #212121;
   font-size: 14px;
@@ -123,7 +174,6 @@ nav {
 }
 
 .site-nav li {
-  margin-right: 50px;
   display: block;
 }
 
@@ -156,19 +206,22 @@ nav {
   color: #2196F3;
 }
 
+@media screen and (min-width: 480px) {
+  .site-nav {
+    max-width: 480px;
+  }
+  .auth-nav {
+    max-width: 480px;
+  }
+  .site-nav-item a {
+    padding-bottom: 8px;
+  }
+}
+
 .adress-link {
   font-weight: 500;
   display: flex;
   align-items: center;
-}
-
-.auth-nav {
-  display: flex;
-  margin-left: auto;
-}
-
-.auth-nav li:first-child {
-  margin-right: 50px;
 }
 
 .adress-link svg {
@@ -212,6 +265,23 @@ nav {
   margin-left: 12px;
 }
 
+.text-area {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-size: 14px;
+  width: 448px;
+  height: 120px;
+  resize: none;
+  padding-top: 15px;
+  padding-left: 12px;
+  margin-top: 4px;
+  outline: none;
+}
+
+.text-area::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
 .backdrop {
   position: fixed;
   width: 100%;
@@ -241,6 +311,12 @@ nav {
   background-color: transparent;
 }
 
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .checkbox-label {
+    font-size: 12px;
+  }
+}
+
 .modal-input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -268,23 +344,6 @@ nav {
 .modal-form:focus-within .modal-input {
   border-color: #2196F3;
   transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.text-area {
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  font-size: 14px;
-  width: 448px;
-  height: 120px;
-  resize: none;
-  padding-top: 15px;
-  padding-left: 12px;
-  margin-top: 4px;
-  outline: none;
-}
-
-.text-area::placeholder {
-  color: rgba(117, 117, 117, 0.5);
 }
 
 .checkbox-wrapper {
@@ -337,15 +396,6 @@ nav {
   color: #2196F3;
   text-decoration: underline;
   margin-left: 3px;
-}
-
-.footer-form {
-  margin-left: 88px;
-}
-
-.form-footer {
-  width: 570px;
-  display: flex;
 }
 
 .input-user-mail {
@@ -503,6 +553,18 @@ nav {
   transition: all 0.75s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .filter {
+    flex-wrap: wrap;
+    width: 317px;
+    flex-wrap: wrap;
+    place-content: flex-start;
+  }
+  .filter-list:not(:nth-child(n+4)) {
+    margin-bottom: 15px;
+  }
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -544,6 +606,31 @@ nav {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.burger-button {
+  position: relative;
+  z-index: 100;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-btn-close {
+  display: none;
+}
+
+.burger-button.is-open .menu-btn-close {
+  display: block;
+}
+
+.burger-button.is-open .menu-btn-open {
+  display: none;
+}
+
+@media screen and (min-width: 767px) {
+  .burger-button {
+    display: none;
+  }
+}
+
 address a {
   margin-bottom: 8px;
   display: block;
@@ -575,14 +662,8 @@ footer {
 }
 
 footer .container {
-  display: flex;
   align-items: center;
   align-items: baseline;
-}
-
-.footer-link {
-  margin-left: 70px;
-  width: 270px;
 }
 
 .footer-adress address {
@@ -621,5 +702,29 @@ footer .container {
 .footer-list-link:hover,
 .footer-list-link:focus {
   background-color: #2196F3;
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    text-align: center;
+  }
+  .footer-link {
+    margin: 0 auto;
+    width: 206px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+  }
+  .logo {
+    margin: 0;
+    font-size: 24px;
+  }
+  address {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .input-user-mail {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 /*# sourceMappingURL=portfolio.css.map */

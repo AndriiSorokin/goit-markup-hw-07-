@@ -4,7 +4,7 @@ nav {
 }
 
 .site-nav {
-    display: flex;
+    // display: flex;
     & a {
         color: $second-text-color;
         font-size: 14px;
@@ -19,7 +19,7 @@ nav {
         color: $hover-text-color;
     }
     & li {
-        margin-right: 50px;
+        // margin-right: 50px;
         display: block;
     }
     & li:last-child {
@@ -48,5 +48,18 @@ nav {
     &:hover,
     &:focus {
         color: $hover-text-color;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .site-nav {
+        max-width: 480px;
+        ;
+    }
+    .auth-nav {
+        max-width: 480px;
+    }
+    .site-nav-item a {
+        padding-bottom: 8px;
     }
 }

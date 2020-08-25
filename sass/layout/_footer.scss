@@ -29,16 +29,13 @@ footer {
 }
 
 footer .container {
-  display: flex;
   align-items: center;
   align-items: baseline;
 }
 
-.footer-link {
-  margin-left: 70px;
-  width: 270px;
-}
-
+// .footer-link {
+//   width: 270px;
+// }
 .footer-adress address {
   margin-top: 20px;
   width: 270px;
@@ -75,4 +72,28 @@ footer .container {
 .footer-list-link:hover,
 .footer-list-link:focus {
   background-color: $hover-text-color;
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    text-align: center;
+  }
+  .footer-link {
+    margin: 0 auto;
+    width: 206px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+  }
+  .logo {
+    margin: 0;
+    font-size: 24px;
+  }
+  address {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .input-user-mail {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }

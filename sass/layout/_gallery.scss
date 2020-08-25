@@ -90,3 +90,15 @@
     transform: translateY(25%);
     transition: all 0.75s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@media screen and (min-width: 480px) and (max-width:1199px) {
+    .filter {
+        flex-wrap: wrap;
+        width: 317px;
+        flex-wrap: wrap;
+        place-content: flex-start;
+    }
+    .filter-list:not(:nth-child(n+4)) {
+        margin-bottom: 15px;
+    }
+}

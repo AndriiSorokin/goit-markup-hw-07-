@@ -4,14 +4,13 @@
     align-items: center;
 }
 
-.auth-nav {
-    display: flex;
-    margin-left: auto;
-    & li:first-child {
-        margin-right: 50px;
-    }
-}
-
+// .auth-nav {
+//     // display: flex;
+//     margin-left: auto;
+//     & li:first-child {
+//         margin-right: 50px;
+//     }
+// }
 .adress-link svg {
     fill: currentColor;
     margin-right: 10px;
